@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Parallax</title>
+</head>
+<body>
+    <section>
+        <img src="imgs/bg.jpg" id="bg">
+        <img src="imgs/moon.png" id="moon">
+        <img src="imgs/mountain.png" id="mountain">
+        <img src="imgs/road.png" id="road">
+        <h2 id="text">Moon Light</h2>
+    </section>
+
+    <div class="lorem-container">
+        <div class="lorem-text">
+            <h1>
+                Lorem ipsum
+            </h1>
+        
+            <p>
+                &nbsp&nbsp&nbsp&nbspDolore est id commodo laboris laborum do aute cillum. Et voluptate ad id anim ut reprehenderit et. Aliquip id ullamco labore culpa commodo.
+                <br><br>
+                &nbsp&nbsp&nbsp&nbspUllamco irure aliqua nulla anim ea tempor adipisicing. Ea occaecat sunt anim mollit pariatur reprehenderit dolor culpa. Occaecat incididunt adipisicing in nisi.
+                <br><br>
+                &nbsp&nbsp&nbsp&nbspIn consequat minim esse nulla dolor. Ullamco est culpa consectetur fugiat et minim magna est sit incididunt occaecat. Consectetur id reprehenderit anim officia ullamco culpa nulla quis incididunt ex excepteur id cupidatat. Cillum cupidatat exercitation elit laborum.Dolore est id commodo laboris laborum do aute cillum. Et voluptate ad id anim ut reprehenderit et. Aliquip id ullamco labore culpa commodo. In consequat minim esse nulla dolor. Ullamco est culpa consectetur fugiat et minim magna est sit incididunt occaecat. Consectetur id reprehenderit anim officia ullamco culpa nulla quis incididunt ex excepteur id cupidatat. Cillum cupidatat exercitation elit laborum.Dolore est id commodo laboris laborum do aute cillum. Et voluptate ad id anim ut reprehenderit et. Aliquip id ullamco labore culpa commodo.
+                <br><br>
+                &nbsp&nbsp&nbsp&nbspIn consequat minim esse nulla dolor. Ullamco est culpa consectetur fugiat et minim magna est sit incididunt occaecat. Consectetur id reprehenderit anim officia ullamco culpa nulla quis incididunt ex excepteur id cupidatat. Cillum cupidatat exercitation elit laborum.Dolore est id commodo laboris laborum do aute cillum. Et voluptate ad id anim ut reprehenderit et. Aliquip id ullamco labore culpa commodo. In consequat minim esse nulla dolor. Ullamco est culpa consectetur fugiat et minim magna est sit incididunt occaecat. Consectetur id reprehenderit anim officia ullamco culpa nulla quis incididunt ex excepteur id cupidatat.
+                <br><br>
+                &nbsp&nbsp&nbsp&nbspDolore est id commodo laboris laborum do aute cillum. Et voluptate ad id anim ut reprehenderit et. Aliquip id ullamco labore culpa commodo.
+                <br><br>
+                &nbsp&nbsp&nbsp&nbspUllamco irure aliqua nulla anim ea tempor adipisicing. Ea occaecat sunt anim mollit pariatur reprehenderit dolor culpa. Occaecat incididunt adipisicing in nisi.
+                <br><br>
+                &nbsp&nbsp&nbsp&nbspIn consequat minim esse nulla dolor. Ullamco est culpa consectetur fugiat et minim magna est sit incididunt occaecat. Consectetur id reprehenderit anim officia ullamco culpa nulla quis incididunt ex excepteur id cupidatat. Cillum cupidatat exercitation elit laborum.Dolore est id commodo laboris laborum do aute cillum. Et voluptate ad id anim ut reprehenderit et. Aliquip id ullamco labore culpa commodo. In consequat minim esse nulla dolor. Ullamco est culpa consectetur fugiat et minim magna est sit incididunt occaecat. Consectetur id reprehenderit anim officia ullamco culpa nulla quis incididunt ex excepteur id cupidatat. Cillum cupidatat exercitation elit laborum.Dolore est id commodo laboris laborum do aute cillum. Et voluptate ad id anim ut reprehenderit et. Aliquip id ullamco labore culpa commodo.
+                <br><br>
+                &nbsp&nbsp&nbsp&nbspIn consequat minim esse nulla dolor. Ullamco est culpa consectetur fugiat et minim magna est sit incididunt occaecat. Consectetur id reprehenderit anim officia ullamco culpa nulla quis incididunt ex excepteur id cupidatat. Cillum cupidatat exercitation elit laborum.Dolore est id commodo laboris laborum do aute cillum. Et voluptate ad id anim ut reprehenderit et. Aliquip id ullamco labore culpa commodo. In consequat minim esse nulla dolor. Ullamco est culpa consectetur fugiat et minim magna est sit incididunt occaecat. Consectetur id reprehenderit anim officia ullamco culpa nulla quis incididunt ex excepteur id cupidatat.
+        </div>
+    </div>
+
+    <script>
+        let bg = document.getElementById('bg')
+        let moon = document.getElementById('moon')
+        let mountain = document.getElementById('mountain')
+        let road = document.getElementById('road')
+        let text = document.getElementById('text')
+
+        // Listen scroll event
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY
+
+            // background
+            bg.style.top = `${value * -0.5}px`
+
+            // moon
+            moon.style.left = `${value}px`
+
+            // mountain
+            mountain.style.top = `${value * -0.2}px`
+
+            // text
+            text.style.top = `${value}px`
+        })
+    </script>    
+</body>
+</html>

@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    background-color: #0a2a43;
+    min-height: 1500px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Create the div with the gradient */
+section:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #0a2a43, transparent);
+    z-index: 10;
+}
+
+section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a2a43;
+    mix-blend-mode: color;
+    z-index: 10;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#text {
+    position: relative;
+    color: #fff;
+    font-size: 10em;
+    z-index: 1;
+}
+
+#road {
+    z-index: 3;
+}
+
+.lorem-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.lorem-text {
+    width: 80%;
+    max-width: 1000px;
+}
+
+.lorem-container h1 {
+    text-align: center;
+    font-size: 5em;
+}
+
+.p {
+    font-size: 2em;
+}
