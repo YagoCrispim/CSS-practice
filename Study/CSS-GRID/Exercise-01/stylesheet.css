@@ -1,0 +1,72 @@
+html, body {
+  margin: 20px;
+  height: calc(100% - 40px);
+  background-color: lightgray;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  border: solid 5px dodgerblue;
+  background: #FFFFFF;
+}
+
+/* GRID */
+body {
+  display: grid;
+  /* Define como será a organização das colunas
+  Cada coluna ocupa 50% do espaço */
+  grid-template-columns: 50% 50%;
+
+  /* Multiplica o valor(8.33%) por 12 vezes
+  12 colunas com 8.33% do tamanho da div */
+  grid-template-columns: repeat(12, 8.33%);
+
+  /* 11 colunas com 60px e a última com 200px */
+  grid-template-columns: repeat(11, 60px) 200px;
+
+  /* A primeira coluna terá 200px, a segunda 20% do espaço total e a última
+  pega o restante do espaço */
+  grid-template-columns: 200px 20% 1fr;
+
+  /* Cada coluna terá uma parcela do tamanho */
+  grid-template-columns: 3fr 6fr 3fr;
+
+  /* Mesma lógica do grid-template-columns */
+  grid-auto-rows: 50% 25% 12.5% 12.5%;
+
+  /* Primeira linha com 3px e as outras dividias igualmente */
+  grid-template-rows: 100px auto;
+}
+
+.d8 {
+  /* Inicia a partir da coluna 2(linha vertical 2) */
+  grid-column-start: 2;
+
+  /* Acaba na linha 4 */
+  /* grid-column-end: 4; */
+
+  /* Mesmo resultado do ex acima. */
+  grid-column-end: span 2;
+
+  grid-row-start: 3;
+  grid-row-end: 5;
+  grid-row-end: span 2;
+}
+
+.d10, .d11 {
+  /* o 10 e o 11 ocupam o mesmo espaço */
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  grid-row-start: 5;
+  grid-row-end: span 1;
+
+  /* Alterando o z-index o 10 aparece na frente */
+}
+
+.d10 {
+  z-index: 10;
+}
