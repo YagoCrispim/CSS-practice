@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0a2236;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Roboto', monospace;
+}
+
+.card {
+  width: 400px;
+  height: 500px;
+  color: #fff;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  border-radius: 60px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+}
+
+.inner-ball {
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  transition: 1s ease-in-out;
+  background: linear-gradient(to right, #f7b733, #fc4a1a);
+  background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);
+}
+
+.card:hover > .inner-ball {
+  margin-top: -390px;
+  position: absolute;
+  border-radius: 100%;
+}
+
+.icon {
+  width: 500px;
+  z-index: 100;
+  transition: 1s ease-in-out;
+}
+
+.card:hover > .icon {
+  margin-top: -120px;
+}
+
+.card > h1 {
+  z-index: 5;
+  display: flex;
+  font-size: 3em;
+  font-weight: 300;
+  margin-top: 620px;
+  position: absolute;
+  transition: 1s ease-in-out;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.card:hover > h1 {
+  margin-top: 250px;
+}
+
+button {
+  z-index: 3;
+  width: 150px;
+  height: 35px;
+  font-size: 1em;
+  margin-top: 720px;
+  position: absolute;
+  border-radius: 5px;
+  border-style: none;
+  transition: 1s ease-in-out;
+  background: linear-gradient(to right, #f7b733, #fc4a1a);
+  background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);
+}
+
+.card:hover > button {
+  margin-top: 350px;
+}
