@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Text area</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <h1>Lorem ipsum</h1>
+        <div class="content-text">
+          <p>
+            &nbsp&nbsp&nbsp&nbspVoluptate eiusmod ea ullamco ad consectetur ea
+            pariatur consectetur qui adipisicing sit cupidatat ad enim. Ea
+            consequat minim cillum ullamco voluptate cupidatat eiusmod quis ad
+            consequat. Velit eu minim cillum adipisicing eiusmod deserunt
+            consectetur commodo dolore adipisicing. Irure consequat nulla ad
+            dolor nulla. Adipisicing adipisicing irure fugiat eu deserunt
+            voluptate. Laborum irure officia nulla commodo deserunt nostrud
+            veniam mollit sint minim. Tempor adipisicing cillum officia sunt
+            magna. Qui aliquip mollit non sit adipisicing do elit qui
+            incididunt. Quis sit Lorem deserunt ut voluptate aute aute labore ea
+            enim. Proident deserunt Lorem reprehenderit veniam consequat
+            exercitation aute quis. Adipisicing quis in irure nostrud nulla sit
+            et eiusmod nostrud elit quis magna culpa nulla. Ut laborum anim
+            mollit et cupidatat ea culpa nisi dolor incididunt.
+            <br /><br />
+            &nbsp&nbsp&nbsp&nbspVoluptate eiusmod ea ullamco ad consectetur ea
+            pariatur consectetur qui adipisicing sit cupidatat ad enim. Ea
+            consequat minim cillum ullamco voluptate cupidatat eiusmod quis ad
+            consequat. Velit eu minim cillum adipisicing eiusmod deserunt
+            consectetur commodo dolore adipisicing. Irure consequat nulla ad
+            dolor nulla. Adipisicing adipisicing irure fugiat eu deserunt
+            voluptate. Laborum irure officia nulla commodo deserunt nostrud
+            veniam mollit sint minim. Tempor adipisicing cillum officia sunt
+            magna. Qui aliquip mollit non sit adipisicing do elit qui
+            incididunt. Quis sit Lorem deserunt ut voluptate aute aute labore ea
+            enim. Proident deserunt Lorem reprehenderit veniam consequat
+            exercitation aute quis. Adipisicing quis in irure nostrud nulla sit
+            et eiusmod nostrud elit quis magna culpa nulla. Ut laborum anim
+            mollit et cupidatat ea culpa nisi dolor incididunt.
+            <br /><br />
+          </p>
+        </div>
+        <div class="btn">
+          <button id="btn"><p>Expandir</p></button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Initial state
+      let iniHeight = 200
+      let openClose = true // true === open
+      const btnContent = 'Expandir'
+
+      // Elements
+      const btn = document.querySelector('button') // Expandir
+      const button = document.getElementById('btn')
+      const ct = document.getElementsByClassName('content-text')
+      const ctArray = [...ct]
+
+      button.addEventListener('click', function () {
+        for (let e of ctArray) {
+          if (openClose) {
+            openClose = false
+            e.style.height = iniHeight + 200 + 'px'
+            e.style = 'animation: expand 0.35s linear forwards;'
+            e.style.overflow = `auto`
+            btn.textContent = 'Fechar'
+            console.log(btn)
+          } else {
+            openClose = true
+            e.style.height = iniHeight + 'px'
+            e.style = 'animation: contract 0.35s linear forwards;'
+            e.style.overflow = `hidden`
+            btn.textContent = btnContent
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
