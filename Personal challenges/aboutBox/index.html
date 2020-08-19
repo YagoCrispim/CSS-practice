@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <title>About box</title>
+  </head>
+  <body>
+
+    <div class="content">
+
+      <!-- Por cima de todos -->
+
+      <div class="card-content">
+        <img class="avatar" id="avatar" src="./images/avatar.svg" alt="">
+
+        <div class="void" id="void"></div>
+
+        <div class="presentation">
+          <div class="presentation-void"></div>
+          <div class="presentation-text">
+            <span>Lorem ipsum dolor sit e fd-s</span><br><br>
+            <span>Lorem ipsum dolor sit e fd-s</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script type="text/javascript">
+      const avatar = document.getElementById('avatar')
+      const voidDiv = document.getElementById('void')
+      let state = true // true === animate/ false === intialState
+
+      avatar.addEventListener('click', function() {
+
+        if (state) {
+          avatar.style = 'animation: 1.5s avatarInit  forwards;'
+          voidDiv.style = 'animation: 1.5s voidInit  forwards;'
+          state = !state
+        } else {
+          avatar.style = 'animation: 1.5s avatarInitialState  forwards;'
+          voidDiv.style = 'animation: 1.5s voidInitialState  forwards;'
+          state = !state
+        }
+      })
+    </script>
+  </body>
+</html>
