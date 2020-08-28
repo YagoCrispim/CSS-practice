@@ -45,7 +45,7 @@ a {
 }
 
 .card:hover > .inner-ball {
-  margin-top: -390px;
+  margin-top: -210px;
   position: absolute;
   border-radius: 100%;
 }
@@ -65,14 +65,14 @@ a {
   display: flex;
   font-size: 3em;
   font-weight: 300;
-  margin-top: 620px;
+  margin-top: 300px;
   position: absolute;
   transition: 1s ease-in-out;
   font-family: 'Roboto Mono', monospace;
 }
 
 .card:hover > h1 {
-  margin-top: 250px;
+  margin-top: 120px;
 }
 
 button {
@@ -90,5 +90,5 @@ button {
 }
 
 .card:hover > button {
-  margin-top: 350px;
+  margin-top: 170px;
 }
