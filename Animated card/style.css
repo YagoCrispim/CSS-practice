@@ -36,8 +36,8 @@ a {
 }
 
 .inner-ball {
-  width: 600px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
   position: absolute;
   transition: 1s ease-in-out;
   background: linear-gradient(to right, #f7b733, #fc4a1a);
@@ -65,14 +65,14 @@ a {
   display: flex;
   font-size: 3em;
   font-weight: 300;
-  margin-top: 300px;
+  margin-top: 600px;
   position: absolute;
   transition: 1s ease-in-out;
   font-family: 'Roboto Mono', monospace;
 }
 
 .card:hover > h1 {
-  margin-top: 120px;
+  margin-top: 200px;
 }
 
 button {
@@ -90,5 +90,5 @@ button {
 }
 
 .card:hover > button {
-  margin-top: 170px;
+  margin-top: 400px;
 }
