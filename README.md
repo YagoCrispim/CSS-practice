@@ -4,4 +4,4 @@
 
 Hi! Welcome to my repo of CSS studies. Here I keep all my study in this style sheets language. :rocket::rocket::rocket:
 
-View projects: https://yagocrispim.github.io/CSS-practice/
+View projects: https://yagocrispim.github.io/css-practice/
